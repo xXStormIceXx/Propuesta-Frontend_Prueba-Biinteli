@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Vuelos</title>
+    <link rel="stylesheet" href="/fronted/src/assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vuelos - Viaje por Colombia</h1>
+        <div class="buttons">
+            <button onclick="getFlights('basico')">Rutas Únicas</button>
+            <button onclick="getFlights('intermedio')">Rutas Múltiples</button>
+        </div>
+        <div id="flightResults" class="flight-results">
+            <h2>Resultados de vuelos</h2>
+            <ul id="flightsList"></ul>
+        </div>
+    </div>
+    <script src="/fronted/src/assets/script.js"></script>
+</body>
+</html>

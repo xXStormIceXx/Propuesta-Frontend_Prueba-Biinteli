@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f5;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.flight-results {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.flight-results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.flight-results li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.flight-results li:last-child {
+    border-bottom: none;
+}
