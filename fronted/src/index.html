@@ -1,448 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Website Title -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Viaje Por Colombia</title>
-    
-    <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/fontawesome-all.css" rel="stylesheet">
-    <link href="css/swiper.css" rel="stylesheet">
-	<link href="css/magnific-popup.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
-	
-	<!-- Favicon  -->
-    <link rel="icon" href="images/viajar.png">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/fronted/src/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
-<body data-spy="scroll" data-target=".fixed-top">
-    
+<body>
     <!-- Preloader -->
-	<div class="spinner-wrapper">
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
-        </div>
+    <div class="preloader">
+        <div class="plane"></div>
     </div>
-    <!-- end of preloader -->
-    
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
-        <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
-
-        <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.png" alt="alternative"></a>
-        
-        <!-- Mobile Menu Toggle Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-awesome fas fa-bars"></span>
-            <span class="navbar-toggler-awesome fas fa-times"></span>
-        </button>
-        <!-- end of mobile menu toggle button -->
-
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#header">INICIO <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#intro">OFERTAS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#services">DESTINOS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#contact">CONTACT</a>
-                </li>
-            </ul>
-            <span class="nav-item social-icons">
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <span class="hexagon"></span>
-                        <i class="fab fa-facebook-f fa-stack-1x"></i>
-                    </a>
-                </span>
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <span class="hexagon"></span>
-                        <i class="fab fa-twitter fa-stack-1x"></i>
-                    </a>
-                </span>
-            </span>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/fronted/src/images/viajar.png" alt="Logo" />
+            <span>Viaje Por Colombia</span>
         </div>
-    </nav> <!-- end of navbar -->
-    <!-- end of navbar -->
-
+        <div class="nav-links">
+            <a href="#top" class="active">Inicio</a>
+            <a href="#ofertas">Ofertas</a>
+            <a href="#destinos">Destinos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <button class="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
 
     <!-- Header -->
-    <header id="header" class="header">
-        <div class="header-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <section class="search-section">
-                            <form id="flightSearchForm">
-                                <label for="origin">Origen:</label>
-                                <input type="text" id="origin" name="origin" required>
-                                
-                                <label for="destination">Destino:</label>
-                                <input type="text" id="destination" name="destination" required>
-                                
-                                <label for="date">Fecha:</label>
-                                <input type="date" id="date" name="date" required>
-                                
-                                <button type="submit">Buscar Vuelos</button>
-                            </form>
-                        </section>
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of container -->
-        </div> <!-- end of header-content -->
-    </header> <!-- end of header -->
-    <!-- end of header -->
-    <!-- Services -->
-    <div id="services" class="cards-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">DESTINOS</div>
-                    <h2>Elige el Destino que Mejor se Adapte a Ti</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="img-fluid" src="images/services-1.jpg" alt="alternative">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Off The Ground Off The Ground</h3>
-                            <p>Perfect for fresh ideas or young startups, this package will help get the business off the ground</p>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Environment and competition</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Designing the marketing plan</div>
-                                </li>
-                            </ul>
-                            <p class="price">Starting at <span>$199</span></p>
-                        </div>
-                        <div class="button-container">
-                            <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
-                        </div> <!-- end of button-container -->
+    <header id="top" class="hero">
+        <div class="search-container">
+            <h1>Encuentra tu próximo destino</h1>
+            <form id="flightSearchForm" class="search-form">
+                <div class="input-group">
+                    <i class="fas fa-plane-departure"></i>
+                    <input type="text" id="origin" placeholder="Ciudad de origen" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-plane-arrival"></i>
+                    <input type="text" id="destination" placeholder="Ciudad de destino" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-calendar"></i>
+                    <input type="date" id="date" required>
+                </div>
+                <button type="submit">
+                    <i class="fas fa-search"></i>
+                    Buscar Vuelos
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Destinations -->
+    <section id="destinos" class="destinations">
+        <h2>Destinos Populares</h2>
+        <div class="destination-container">
+            <div class="destinations-scroll">
+                <div class="destination-card">
+                    <img src="/fronted/src/images/BGT.jpg" alt="Bogotá">
+                    <div class="card-content">
+                        <h3>Bogotá</h3>
+                        <p>Desde $199</p>
+                        <button class="details-btn">Ver Detalles</button>
                     </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="img-fluid" src="images/services-2.jpg" alt="alternative">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Accelerated Growth</h3>
-                            <p>Use this service pack to give your company the necessary impulse to become an industry leader</p>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Business strategy planning</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Taking the planned actions</div>
-                                </li>
-                            </ul>
-                            <p class="price">Starting at <span>$299</span></p>
-                        </div>
-                        <div class="button-container">
-                            <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
-                        </div> <!-- end of button-container -->
+                </div>
+                <div class="destination-card">
+                    <img src="/fronted/src/images/BGA.jpg" alt="Bucaramanga">
+                    <div class="card-content">
+                        <h3>Bucaramanga</h3>
+                        <p>Desde $199</p>
+                        <button class="details-btn">Ver Detalles</button>
                     </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="img-fluid" src="images/services-3.jpg" alt="alternative">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Market Domination</h3>
-                            <p>You already are a reference point in your industry now you need to learn about acquisitions</p>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Maintaining the leader status</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Acquisitions the right way</div>
-                                </li>
-                            </ul>
-                            <p class="price">Starting at <span>$299</span></p>
-                        </div>
-                        <div class="button-container">
-                            <a class="btn-solid-reg page-scroll" href="#callMe">DETAILS</a>
-                        </div> <!-- end of button-container -->
+                </div>
+                <div class="destination-card">
+                    <img src="/fronted/src/images/Cali.jpg" alt="Cali">
+                    <div class="card-content">
+                        <h3>Cali</h3>
+                        <p>Desde $199</p>
+                        <button class="details-btn">Ver Detalles</button>
                     </div>
-                    <!-- end of card -->
+                </div>
+                <div class="destination-card">
+                    <img src="/fronted/src/images/Medelllin.jpg" alt="Medellín">
+                    <div class="card-content">
+                        <h3>Medellín</h3>
+                        <p>Desde $249</p>
+                        <button class="details-btn">Ver Detalles</button>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="/fronted/src/images/CTG.jpg" alt="Cartagena">
+                    <div class="card-content">
+                        <h3>Cartagena</h3>
+                        <p>Desde $299</p>
+                        <button class="details-btn">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of cards-2 -->
-    <!-- end of services -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Viaje por Colombia</h4>
+                <p>Encuentra las mejores opciones de vuelos</p>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Viaje por Colombia. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
-    <!-- Team -->
-    <div class="basic-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Our Team Of Consultants</h2>
-                    <p class="p-heading">We're only as strong and as knowledgeable as our team. So here are the men and women which help customers meet goals and grow companies</p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <!-- Team Member -->
-                    <div class="team-member">
-                        <div class="image-wrapper">
-                            <img class="img-fluid" src="images/team-1.png" alt="alternative">
-                        </div> <!-- end of image-wrapper -->
-                        <p class="p-large">John Whitelong</p>
-                        <p class="job-title">General Manager</p>
-                        <span class="social-icons">
-                            <span class="fa-stack">
-                                <a href="#your-link">
-                                    <span class="hexagon"></span>
-                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
-                                </a>
-                            </span>
-                            <span class="fa-stack">
-                                <a href="#your-link">
-                                    <span class="hexagon"></span>
-                                    <i class="fab fa-twitter fa-stack-1x"></i>
-                                </a>
-                            </span>
-                        </span>
-                    </div> <!-- end of team-member -->
-                    <!-- end of team member -->
-
-                    <!-- Team Member -->
-                    <div class="team-member">
-                        <div class="image-wrapper">
-                            <img class="img-fluid" src="images/team-2.png" alt="alternative">
-                        </div> <!-- end of image wrapper -->
-                        <p class="p-large">Veronique Smith</p>
-                        <p class="job-title">Business Developer</p>
-                        <span class="social-icons">
-                            <span class="fa-stack">
-                                <a href="#your-link">
-                                    <span class="hexagon"></span>
-                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
-                                </a>
-                            </span>
-                            <span class="fa-stack">
-                                <a href="#your-link">
-                                    <span class="hexagon"></span>
-                                    <i class="fab fa-twitter fa-stack-1x"></i>
-                                </a>
-                            </span>
-                        </span>
-                    </div> <!-- end of team-member -->
-                    <!-- end of team member -->
-
-                    <!-- Team Member -->
-                    <div class="team-member">
-                        <div class="image-wrapper">
-                            <img class="img-fluid" src="images/team-3.png" alt="alternative">
-                        </div> <!-- end of image wrapper -->
-                        <p class="p-large">Chris Zimerman</p>
-                        <p class="job-title">Online Marketer</p>
-                        <span class="social-icons">
-                            <span class="fa-stack">
-                                <a href="#your-link">
-                                    <span class="hexagon"></span>
-                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
-                                </a>
-                            </span>
-                            <span class="fa-stack">
-                                <a href="#your-link">
-                                    <span class="hexagon"></span>
-                                    <i class="fab fa-twitter fa-stack-1x"></i>
-                                </a>
-                            </span>
-                        </span>
-                    </div> <!-- end of team-member -->
-                    <!-- end of team member -->
-
-                    <!-- Team Member -->
-                    <div class="team-member">
-                        <div class="image-wrapper">
-                            <img class="img-fluid" src="images/team-4.png" alt="alternative">
-                        </div> <!-- end of image wrapper -->
-                        <p class="p-large">Mary Villalonga</p>
-                        <p class="job-title">Community Manager</p>
-                        <span class="social-icons">
-                            <span class="fa-stack">
-                                <a href="#your-link">
-                                    <span class="hexagon"></span>
-                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
-                                </a>
-                            </span>
-                            <span class="fa-stack">
-                                <a href="#your-link">
-                                    <span class="hexagon"></span>
-                                    <i class="fab fa-twitter fa-stack-1x"></i>
-                                </a>
-                            </span>
-                        </span>
-                    </div> <!-- end of team-member -->
-                    <!-- end of team member -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-2 -->
-    <!-- end of team -->
-
-    <!-- Contact -->
-    <div id="contact" class="form-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="text-container">
-                        <div class="section-title">CONTACT</div>
-                        <h2>Get In Touch Using The Form</h2>
-                        <p>You can stop by our office for a cup of coffee and just use the contact form below for any questions and inquiries</p>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="address"><i class="fas fa-map-marker-alt"></i>22nd Innovative Street, San Francisco, CA 94043, US</li>
-                            <li><i class="fas fa-phone"></i><a href="tel:003024630820">+81 720 22 126</a></li>
-                            <li><i class="fas fa-phone"></i><a href="tel:003024630820">+81 720 22 128</a></li>
-                            <li><i class="fas fa-envelope"></i><a href="mailto:office@aria.com">office@aria.com</a></li>
-                        </ul>
-
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                    
-                    <!-- Contact Form -->
-                    <form id="contactForm" data-toggle="validator" data-focus="false">
-                        <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
-                            <label class="label-control" for="cname">Name</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" required>
-                            <label class="label-control" for="cemail">Email</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                            <label class="label-control" for="cmessage">Your message</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I agree with Aria's stated <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a> 
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
-                        </div>
-                        <div class="form-message">
-                            <div id="cmsgSubmit" class="h3 text-center hidden"></div>
-                        </div>
-                    </form>
-                    <!-- end of contact form -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form-2 -->
-    <!-- end of contact -->
-
-
-    <!-- Footer -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="text-container about">
-                        <h4>Viaje por Colombia</h4>
-                        <p class="white">Encuentra las mejores opciones de vuelos</p>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-md-2">
-                    <div class="text-container">
-                        <h4>Links</h4>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-md-2">
-                    <div class="text-container">
-                        <h4>Tools</h4>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-md-2">
-                    <div class="text-container">
-                        <h4>Follow Us</h4>
-                        <span class="fa-stack">
-                            <a class= "white" href="#your-link">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a class= "white" href="#your-link">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a class= "white" href="#your-link">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-instagram fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a class= "white" href="#your-link">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                            </a>
-                        </ul>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of footer -->  
-    <!-- end of footer -->
-
-
-    <!-- Copyright -->
-    <div class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2020 <a href="https://github.com/xXStormIceXx">Ruben Dario Ortiz Ortega</a></p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of copyright --> 
-    <!-- end of copyright -->
-    
-    	
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script type="module" src="/fronted/src/js/main.js"></script>
 </body>
 </html>
